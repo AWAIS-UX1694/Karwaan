@@ -22,8 +22,8 @@ const Header = () => {
 
         <div className="logo text-3xl font-600 "> Karwaa.n </div>
         <div className="links flex gap-3 items-center">
-          <div className="font-bold sm:hidden">About</div>
-          <div className="font-bold sm:hidden">FAQ's</div>
+          <div className="font-bold hidden sm:visible">About</div>
+          <div className="font-bold hidden md:hidden">FAQ's</div>
           <div className="rounded-full bg-gray-100 p-4">
             <img
               width="24"
