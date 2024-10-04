@@ -12,9 +12,8 @@ const Header = () => {
         <div className="menu hover:rotate-180 transition-all duration-500 transform-gpu cursor-pointer ">
           <img
               onClick={toggleDrawer}
-            width="30"
+            className="w-8 h-8"
             color="white"
-            height="30"
             src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/external-application-user-interface-anggara-basic-outline-anggara-putra.png"
             alt="external-application-user-interface-anggara-basic-outline-anggara-putra"
           />
