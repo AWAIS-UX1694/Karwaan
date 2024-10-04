@@ -49,7 +49,7 @@ const Home = () => {
           <div className="items-center">
             <button
               onClick={toggleCategoryDropdown}
-              className="inline-flex items-center w-[20vw] justify-between bg-gray-50 p-2 pl-5 pr-2 rounded-[2rem]"
+              className="inline-flex items-center w-[20vw] min-w-[200px] justify-between bg-gray-50 p-2 pl-5 pr-2 rounded-[2rem]"
             >
               <p className="text-lg text-gray-400">Categories</p>
               <div className="drop h-12 flex w-12 rounded-full bg-white items-center justify-center">
@@ -71,7 +71,7 @@ const Home = () => {
           </div>
 
           {isCategoryOpen && (
-            <div className="z-50 origin-top-right absolute right-0 mt-2 w-[20vw] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+            <div className="z-50 origin-top-right absolute right-0 mt-2 w-[20vw] min-w-[200px] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
               <div className="p-2" role="menu" aria-orientation="vertical">
                 <a
                   href="#"
@@ -104,7 +104,7 @@ const Home = () => {
           <div className="items-center">
             <button
               onClick={toggleSeasonDropdown}
-              className="inline-flex items-center w-[15vw] justify-between bg-gray-50 p-2 pl-5 pr-2 rounded-[2rem]"
+              className="inline-flex items-center w-[15vw] min-w-[200px] justify-between bg-gray-50 p-2 pl-5 pr-2 rounded-[2rem]"
             >
               <p className="text-lg text-gray-400">Seasons</p>
               <div className="drop h-12 flex w-12 rounded-full bg-white items-center justify-center">
@@ -126,7 +126,7 @@ const Home = () => {
           </div>
 
           {isSeasonOpen && (
-            <div className="origin-top-right absolute right-0 mt-2 w-[14vw] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+            <div className="origin-top-right absolute right-0 mt-2 w-[14vw] min-w-[200px] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
               <div className="p-2" role="menu" aria-orientation="vertical">
                 <a
                   href="#"
@@ -144,7 +144,7 @@ const Home = () => {
                 </a>
                 <a
                   href="#"
-                  className="block px-4 py-4 rounded-xl text-md font-[500] hover:bg-gray-100"
+                  className="block px-4  py-4 rounded-xl text-md font-[500] hover:bg-gray-100"
                   role="menuitem"
                 >
                   Fall
@@ -201,7 +201,7 @@ const Home = () => {
           Women
         </button>
         <button className="rounded-[2rem]  text-lg px-10 border-2  border-gray-200">
-          New Arival
+          <p className="w-24">New Arival</p>
         </button>
         <button className="rounded-[2rem]  text-lg px-10 border-2  border-gray-200">
           Children
