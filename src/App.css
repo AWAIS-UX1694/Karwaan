@@ -51,3 +51,8 @@
 .filter::-webkit-scrollbar {
   display: none;
 }
+
+.women{
+  background-position: center; 
+  background-size: cover;
+}
