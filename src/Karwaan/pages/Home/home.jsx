@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Collection from "./collection";
 
 const Home = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
@@ -19,17 +20,17 @@ const Home = () => {
     {
       id: 1,
       bgImage:
-        "url('https://img.freepik.com/free-photo/group-beautiful-girls-boys-pastel_155003-12453.jpg?t=st=1727975492~exp=1727979092~hmac=5d4052142d56f2386bc237b394155af71a90dd33d548f15e5f15323a82addef9&w=996')",
+        "url('https://www.shadidress.us/wp-content/uploads/2024/03/Asim-Jofa-Banner.webp')",
     },
     {
       id: 2,
       bgImage:
-        "url('https://img.freepik.com/free-photo/woman-with-shopping-bags-studio-yellow-background-isolated_1303-14294.jpg?t=st=1727975373~exp=1727978973~hmac=9e73cc0b76e0193b3305788b4d8d840920453d05d93f2ce8ee93b7a95ac56454&w=996')",
+        "url('https://i.ytimg.com/vi/AHgkhfpa8c8/maxresdefault.jpg')",
     },
     {
       id: 3,
       bgImage:
-        "url('https://img.freepik.com/free-photo/sexy-attractive-male-confident-hipster-handsome-stylish-bearded-man-brown_285396-4630.jpg?t=st=1727975434~exp=1727979034~hmac=22d1a7bee724d7b62185b3f8fc7377fc877fab0871d1586fcf43afce0e2dc42d&w=996')",
+        "url('https://blog.bridals.pk/wp-content/uploads/2019/01/sania-malabar-banner.jpg')",
     },
   ];
 
@@ -164,7 +165,31 @@ const Home = () => {
         {/* Serach bar */}
         <div className="relative inline-block text-left ">
           <div className="items-center">
-            
+          <div className="inline-flex items-center md:w-[30vw] lg::w-[30vw] w-full justify-between bg-gray-50 p-2 pl-5 pr-2 rounded-[2rem]">
+          <input
+            type="text"
+            placeholder="Search by name..." 
+            className="bg-transparent focus:outline-none text-lg text-gray-400 w-full"
+          />
+          {/* Customizable Search Icon */}
+          <div className="drop h-12 flex w-16 rounded-full bg-white items-center justify-center">
+            <svg
+              className="ml-2 w-5 h-5 mr-2 text-gray-400"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M21 21l-4.35-4.35M18 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
+              />
+            </svg>
+          </div>
+        </div>
           </div>
         </div>
 
@@ -234,6 +259,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Collection />
     </>
   );
 };
