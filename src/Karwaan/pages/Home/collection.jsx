@@ -2,7 +2,7 @@ const Collection = () => {
     return (
         <section className="w-full p-4">
             <div className="main flex flex-col gap-7 md:flex-row lg:flex-row">
-                <div className="right bg-cover rounded-3xl overflow-hidden bg-slate-300 h-svh w-full lg:w-[35vw]">
+                <div className="right bg-cover rounded-3xl overflow-hidden bg-slate-300 md:h-svh w-full lg:w-[35vw]">
                     <img className="h-full w-full" src="https://www.hdcollection.com.pk/cdn/shop/files/9_e7c59b7d-dd79-4e11-9c0d-a1f7a9f4e0f0.jpg?v=1683839000" alt="" />
                 </div>
                 <div className="left flex flex-col gap-7 w-full h-svh lg:w-[65vw]">
