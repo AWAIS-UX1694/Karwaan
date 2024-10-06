@@ -13,14 +13,14 @@ const Header = () => {
         <div className="menu hover:rotate-180 transition-all duration-500 transform-gpu cursor-pointer ">
           <img
             onClick={toggleDrawer}
-            className="w-8 h-8"
+            className="md:w-8  md:h-8 w-6 h-6"
             color="white"
             src="https://img.icons8.com/external-anggara-basic-outline-anggara-putra/24/external-application-user-interface-anggara-basic-outline-anggara-putra.png"
             alt="external-application-user-interface-anggara-basic-outline-anggara-putra"
           />
         </div>
 
-        <div className="logo text-3xl font-600 ">
+        <div className="logo md:text-3xl text-2xl font-600 ">
           <Link to="/"> Karwaa.n </Link>
         </div>
         <div className="links flex gap-3 items-center">
@@ -28,8 +28,8 @@ const Header = () => {
           <div className="font-bold hidden md:hidden">FAQ's</div>
           <div className="rounded-full bg-gray-100 p-4">
             <img
-              width="24"
-              height="24"
+              width="md:24 16"
+              height="md:24 16"
               src="https://img.icons8.com/forma-thin/24/shopping-bag.png"
               alt="shopping-bag"
             />{" "}
