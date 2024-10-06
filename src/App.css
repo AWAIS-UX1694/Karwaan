@@ -52,7 +52,17 @@
   display: none;
 }
 
-.women{
-  background-position: center; 
-  background-size: cover;
+.right{
+  background-image: url("https://www.hdcollection.com.pk/cdn/shop/files/9_e7c59b7d-dd79-4e11-9c0d-a1f7a9f4e0f0.jpg?v=1683839000");
+  height: 100%;
+}
+
+.stitched{
+  background-image: url("https://rilancio.pk/cdn/shop/files/MSTE2P24V328_5_1000x.jpg?v=1716544664");
+}
+.unstiched{
+  background-image: url("https://chasevalue.pk/cdn/shop/products/DZ7A9426_496b6cda-870a-4540-80b3-6652bef87fe2.jpg?v=1631010593");
+}
+.unstiched{
+  background-image: url("https://chasevalue.pk/cdn/shop/products/DZ7A9426_496b6cda-870a-4540-80b3-6652bef87fe2.jpg?v=1631010593");
 }

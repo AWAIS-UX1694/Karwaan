@@ -20,17 +20,17 @@ const Home = () => {
     {
       id: 1,
       bgImage:
-        "url('https://www.shadidress.us/wp-content/uploads/2024/03/Asim-Jofa-Banner.webp')",
+      "url('https://blog.bridals.pk/wp-content/uploads/2019/01/sania-malabar-banner.jpg')",
     },
     {
       id: 2,
       bgImage:
-        "url('https://i.ytimg.com/vi/AHgkhfpa8c8/maxresdefault.jpg')",
+      "url('https://i.ytimg.com/vi/AHgkhfpa8c8/maxresdefault.jpg')",
     },
     {
       id: 3,
       bgImage:
-        "url('https://blog.bridals.pk/wp-content/uploads/2019/01/sania-malabar-banner.jpg')",
+      "url('https://www.shadidress.us/wp-content/uploads/2024/03/Asim-Jofa-Banner.webp')",
     },
   ];
 
