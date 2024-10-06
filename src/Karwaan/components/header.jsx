@@ -9,7 +9,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex md:px-9 px-5 p-3 justify-between text-center items-center">
+      <header className="flex md:px-9 px-5 p-3 justify-between bg-white dark:bg-gray-900  text-center items-center">
         <div className="menu hover:rotate-180 transition-all duration-500 transform-gpu cursor-pointer ">
           <img
             onClick={toggleDrawer}
@@ -20,7 +20,7 @@ const Header = () => {
           />
         </div>
 
-        <div className="logo md:text-3xl text-2xl font-600 ">
+        <div className="logo md:text-3xl dark:text-orange-600 text-2xl font-600 ">
           <Link to="/"> Karwaa.n </Link>
         </div>
         <div className="links flex gap-3 items-center">
@@ -111,6 +111,23 @@ const Header = () => {
                     <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
                   </svg>
                   <span className="ml-3">Brand</span>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/allproduct"
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                >
+                  <svg
+                    className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 18 18"
+                  >
+                    <path d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+                  </svg>
+                  <span className="ml-3">All Product</span>
                 </Link>
               </li>
               {/* Add more navigation links as needed */}

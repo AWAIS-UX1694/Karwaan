@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Collection from "./collection";
+import MajorBrand from "./majorbrands";
 
 const Home = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
@@ -260,6 +261,7 @@ const Home = () => {
         </div>
       </section>
       <Collection />
+      <MajorBrand/>
     </>
   );
 };

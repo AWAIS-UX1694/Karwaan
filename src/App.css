@@ -66,3 +66,9 @@
 .unstiched{
   background-image: url("https://chasevalue.pk/cdn/shop/products/DZ7A9426_496b6cda-870a-4540-80b3-6652bef87fe2.jpg?v=1631010593");
 }
+/* This applies the polygon shape to the div */
+/* .clipped-shape {
+  background-size: cover;
+  background-image: url("https://i.ytimg.com/vi/67pVpXU22dM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCa0LLck2s5Otz4IlRiP6T-HZD-nQ");
+  clip-path: polygon(11% 0, 100% 0%, 100% 100%, 62% 100%);
+} */
