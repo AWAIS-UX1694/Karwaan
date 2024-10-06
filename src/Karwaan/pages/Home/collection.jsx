@@ -3,19 +3,19 @@ const Collection = () => {
     <section className="w-full p-4">
       <div className="main flex flex-col gap-7 md:flex-row lg:flex-row">
         <div className="right bg-cover rounded-3xl overflow-hidden bg-slate-300 min-h-[40rem] md:h-svh w-full lg:w-[35vw]">
-            <div className="relative top-16 left-5">
-              <h2 className="text-[2.5rem] font-[700] z-10 text-orange-500 ">
+        <div className="absolute m-3 md:m-10 ">
+              <h2 className="text-[2rem] md:text-[2.5rem]  font-[700] z-10 text-orange-500 ">
                 Women Unstitched
               </h2>
-              <h2 className="text-4xl text-white font-[600]">Collection</h2>
+              <h2 className="md:text-4xl text-3xl text-white font-[600]">Collection</h2>
               <button className="wst flex items-center gap-3 mt-2 border-0 bg-transparent hover:ml-5 transition-all duration-300 font-[200] ml-1">
-                <p className="text-xl text-white">View Product</p>{" "}
+                <p className="md:text-xl text-lg text-white">View Product</p>{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
@@ -26,24 +26,24 @@ const Collection = () => {
                   />
                 </svg>
               </button>
-          </div>
+            </div>
         </div>
         <div className="left flex flex-col gap-7 w-full h-svh lg:w-[65vw]">
           <div className="men h-[50%] w-full overflow-hidden gap-7 flex flex-col md:flex-row lg:flex-row">
             <div className="stiched bg-contain rounded-3xl overflow-hidden w-full h-[200rem] md:h-[100%] lg-h-auto lg:w-[50%]">
-            <div className="absolute m-10 ">
-              <h2 className="text-[2.5rem] font-[700] z-10 text-orange-500 ">
+            <div className="absolute m-3 md:m-10 ">
+              <h2 className="text-[2rem] md:text-[2.5rem]  font-[700] z-10 text-orange-500 ">
                 Men Stitched
               </h2>
-              <h2 className="text-4xl text-white font-[600]">Collection</h2>
+              <h2 className="md:text-4xl text-3xl text-white font-[600]">Collection</h2>
               <button className="wst flex items-center gap-3 mt-2 border-0 bg-transparent hover:ml-5 transition-all duration-300 font-[200] ml-1">
-                <p className="text-xl text-white">View Product</p>{" "}
+                <p className="md:text-xl text-lg text-white">View Product</p>{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
@@ -62,19 +62,19 @@ const Collection = () => {
               />
             </div>
             <div className="unstiched bg-cover rounded-3xl overflow-hidden w-full h-[200rem] md:h-[100%] lg-h-auto lg:w-[50%]">
-            <div className="absolute m-10 ">
-              <h2 className="text-[2.5rem] font-[700] z-10 text-orange-500 ">
+            <div className="absolute m-3 md:m-10 ">
+              <h2 className="text-[2rem] md:text-[2.5rem]  font-[700] z-10 text-orange-500 ">
                 Men Unstitched
               </h2>
-              <h2 className="text-4xl text-white font-[600]">Collection</h2>
+              <h2 className="md:text-4xl text-3xl text-white font-[600]">Collection</h2>
               <button className="wst flex items-center gap-3 mt-2 border-0 bg-transparent hover:ml-5 transition-all duration-300 font-[200] ml-1">
-                <p className="text-xl text-white">View Product</p>{" "}
+                <p className="md:text-xl text-lg text-white">View Product</p>{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
@@ -93,20 +93,20 @@ const Collection = () => {
               />
             </div>
           </div>
-          <div className="women rounded-3xl overflow-hidden w-full md:h-[50%]">
-          <div className="absolute m-10 ">
-              <h2 className="text-[2.5rem] font-[700] z-10 text-orange-500 ">
+          <div className="women rounded-3xl overflow-hidden w-full h-[12rem] md:h-[50%]">
+          <div className="absolute m-3 md:m-10 ">
+              <h2 className="text-[2rem] md:text-[2.5rem]  font-[700] z-10 text-orange-500 ">
                 Women Stitched
               </h2>
-              <h2 className="text-4xl text-white font-[600]">Collection</h2>
+              <h2 className="md:text-4xl text-3xl text-white font-[600]">Collection</h2>
               <button className="wst flex items-center gap-3 mt-2 border-0 bg-transparent hover:ml-5 transition-all duration-300 font-[200] ml-1">
-                <p className="text-xl text-white">View Product</p>{" "}
+                <p className="md:text-xl text-lg text-white">View Product</p>{" "}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="w-6 h-6"
+                  class="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
