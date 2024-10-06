@@ -26,10 +26,10 @@ const Header = () => {
         <div className="links flex gap-3 items-center">
           <div className="font-bold hidden sm:visible">About</div>
           <div className="font-bold hidden md:hidden">FAQ's</div>
-          <div className="rounded-full bg-gray-100 p-4">
+          <div className="rounded-full bg-gray-100 md:p-4 p-2">
             <img
-              width="md:24 16"
-              height="md:24 16"
+            className="md:w-6 md:h-6 w-4 h-4"
+            
               src="https://img.icons8.com/forma-thin/24/shopping-bag.png"
               alt="shopping-bag"
             />{" "}
