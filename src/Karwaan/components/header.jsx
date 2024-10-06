@@ -9,7 +9,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex pr-9 pl-9 p-3 justify-between text-center items-center">
+      <header className="flex md:px-9 px-5 p-3 justify-between text-center items-center">
         <div className="menu hover:rotate-180 transition-all duration-500 transform-gpu cursor-pointer ">
           <img
             onClick={toggleDrawer}
