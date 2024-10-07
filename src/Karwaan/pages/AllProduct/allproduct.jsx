@@ -96,6 +96,44 @@ const products = [
       { icon: "best-price-icon-path", label: "Best Price" },
     ],
   },
+  {
+    id: 6,
+    name: "Embroidered Raw Silk Saree | SF-W24-15",
+    image: "https://www.mariab.pk/cdn/shop/files/SFW2415FeroziFront_540x.jpg?v=1727865763",
+    rating: 5,
+    reviews: 455,
+    price: 170499,
+    discount: 0,
+    category: "braded",
+    season: "summer",
+    gender: "women",
+    type: "Ready to Ware",
+    brand: "Maria B",
+    wear: "New",
+    features: [
+      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
+      { icon: "best-price-icon-path", label: "Best Price" },
+    ],
+  },
+  {
+    id: 7,
+    name: "3 Piece - Unstitched Suit | EID LAWN-24-02",
+    image: "https://www.mariab.pk/cdn/shop/files/D-2Front_7dfe021f-5fa2-4201-9f34-d9ad2cf96bd5_540x.jpg?v=1715582509",
+    rating: 4,
+    reviews: 455,
+    price: 23499,
+    discount: 30,
+    category: "Lawn",
+    season: "summer",
+    gender: "women",
+    type: "3 piece",
+    brand: "Maria B",
+    wear: "New",
+    features: [
+      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
+      { icon: "best-price-icon-path", label: "Best Price" },
+    ],
+  },
   // Add more product objects as needed
 ];
 
@@ -136,29 +174,32 @@ const AllProduct = () => {
     <section className="bg-gray-50  py-8 md:py-12 p-4">
       <div className="mb-4">
         <div className="filter flex gap-4 mb-4 overflow-scroll">
-          <select name="category" onChange={handleFilterChange} className="border rounded p-2">
+          <select name="category" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500 ">
+            <option value="">Select Catigory</option>
             <option value="Printed">Printed</option>
             <option value="braded">braded</option>
-            {/* Add more categories as needed */}
+            <option value="Lawn">Lawn</option>
           </select>
-          <select name="season" onChange={handleFilterChange} className="border rounded p-2">
+          <select name="season" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500">
             <option value="Summer">Summer</option>
             <option value="Winter">Winter</option>
             {/* Add more seasons as needed */}
           </select>
-          <select name="gender" onChange={handleFilterChange} className="border rounded p-2">
+          <select name="gender" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500">
             <option value="Women">Women</option>
             <option value="Women Unstitched">Women Unstitched</option>
             {/* Add more genders as needed */}
           </select>
-          <select name="type" onChange={handleFilterChange} className="border rounded p-2">
+          <select name="type" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500">
             <option value="3 piece<">3 piece</option>
             <option value="2 piece">2 piece</option>
+            <option value="Ready to Ware">Ready to ware</option>
             {/* Add more types as needed */}
           </select>
-          <select name="brand" onChange={handleFilterChange} className="border rounded p-2">
+          <select name="brand" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500">
             <option value="AsimJofa">Asim Jofa</option>
             <option value="Bonanza Satrangi">Bonanza Satrangi</option>
+            <option value="Maria B">Maria B</option>
             {/* Add more brands as needed */}
           </select>
           <input
@@ -166,16 +207,16 @@ const AllProduct = () => {
             name="price"
             placeholder="Max Price"
             onChange={handleFilterChange}
-            className="border rounded p-2"
+            className="border p-3 rounded-[2rem] text-gray-500"
           />
           <input
             type="number"
             name="discount"
             placeholder="Max Discount (%)"
             onChange={handleFilterChange}
-            className="border rounded p-2"
+            className="border p-3 rounded-[2rem] text-gray-500"
           />
-          <select name="wear" onChange={handleFilterChange} className="border rounded p-2">
+          <select name="wear" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500">
             <option value="New">New</option>
             <option value="Old">Old</option>
             {/* Add more wear options as needed */}
