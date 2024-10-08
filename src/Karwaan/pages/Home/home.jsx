@@ -44,7 +44,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="filter  overflow-x-visible overflow-y-scroll z-20 scroll-m-14 flex gap-3 mx-4">
+      <section className="filter mt-4 overflow-x-visible overflow-y-scroll z-20 scroll-m-14 flex gap-3 mx-4">
         {/* First Dropdown: Categories */}
         <div className="relative inline-block text-left ">
           <div className="items-center">
@@ -212,7 +212,7 @@ const Home = () => {
         </button>
       </section>
 
-      <section className="hero h-svh  w-full p-4">
+      <section className="hero h-svh z-0 w-full p-4">
         <div className="main  bg-amber-50 h-full overflow-hidden rounded-[2rem] w-full">
           <div className="relative w-full h-full overflow-hidden">
             {/* Carousel Background */}

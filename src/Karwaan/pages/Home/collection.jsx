@@ -1,3 +1,5 @@
+import unstitched from "./../../../assets/images/unstitched.jpg"
+
 const Collection = () => {
   return (
     <section className="w-full p-4">
