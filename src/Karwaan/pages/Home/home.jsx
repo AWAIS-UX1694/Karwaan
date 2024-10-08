@@ -44,7 +44,7 @@ const Home = () => {
 
   return (
     <>
-      <section className="filter mt-4 overflow-x-visible overflow-y-scroll z-20 scroll-m-14 flex gap-3 mx-4">
+      <section className="filter  overflow-x-visible overflow-y-scroll z-20 scroll-m-14 flex gap-3 mx-4">
         {/* First Dropdown: Categories */}
         <div className="relative inline-block text-left ">
           <div className="items-center">
@@ -212,7 +212,7 @@ const Home = () => {
         </button>
       </section>
 
-      <section className="hero h-svh z-0 w-full p-4">
+      <section className="hero h-svh  w-full p-4">
         <div className="main  bg-amber-50 h-full overflow-hidden rounded-[2rem] w-full">
           <div className="relative w-full h-full overflow-hidden">
             {/* Carousel Background */}
@@ -230,7 +230,7 @@ const Home = () => {
               {/* Shop More Button */}
               <button className="flex items-center  mt-4  px-2 pl-5 py-2 rounded-[2.5rem] mb-8">
                 <div className="btn">
-                <p className="text-black h-16 items-center content-center p-4 px-14 rounded-[2.5rem] text-md font-[500] bg-white ">SHOW MORE</p>
+                <p className=" h-16 items-center content-center p-4 px-14 rounded-[2.5rem] text-md hover:bg-black text-black hover:text-white transition-all duration-200  font-[500] bg-white ">SHOW MORE</p>
                 </div>
                 <div className="icon -rotate-45 h-16 w-16  rounded-full bg-gray-100 ">
                   <img className="items-center ml-4 mt-4" width="30" height="30" src="https://img.icons8.com/ios-filled/50/right--v1.png" alt="right--v1"/>
