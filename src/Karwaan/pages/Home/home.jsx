@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Collection from "./collection";
 import MajorBrand from "./majorbrands";
-
+import bg1 from "./../../../assets/images/1.jpg"
+import bg2 from "./../../../assets/images/2.jpg"
+import bg3 from "./../../../assets/images/3.jpg"
 const Home = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [isSeasonOpen, setIsSeasonOpen] = useState(false);
@@ -20,18 +22,15 @@ const Home = () => {
   const slides = [
     {
       id: 1,
-      bgImage:
-      "url('https://blog.bridals.pk/wp-content/uploads/2019/01/sania-malabar-banner.jpg')",
+      bgImage:`url(${bg1})`,
     },
     {
       id: 2,
-      bgImage:
-      "url('https://i.ytimg.com/vi/AHgkhfpa8c8/maxresdefault.jpg')",
+      bgImage:`url(${bg2})`
     },
     {
       id: 3,
-      bgImage:
-      "url('https://www.shadidress.us/wp-content/uploads/2024/03/Asim-Jofa-Banner.webp')",
+      bgImage:`url(${bg3})`
     },
   ];
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 
 const products = [
   {
@@ -16,8 +17,8 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -35,8 +36,8 @@ const products = [
     brand: "Asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -54,8 +55,8 @@ const products = [
     brand: "Asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -73,8 +74,8 @@ const products = [
     brand: "Bonanza Satrangi",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -92,8 +93,8 @@ const products = [
     brand: "Asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -111,8 +112,8 @@ const products = [
     brand: "Maria B",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -130,8 +131,8 @@ const products = [
     brand: "Maria B",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -149,8 +150,8 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -168,8 +169,8 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -187,8 +188,8 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -206,8 +207,8 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -225,8 +226,8 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
   {
@@ -244,13 +245,15 @@ const products = [
     brand: "asim jofa",
     wear: "New",
     features: [
-      { icon: "fast-delivery-icon-path", label: "Fast Delivery" },
-      { icon: "best-price-icon-path", label: "Best Price" },
+      { icon: "M44,24l-4-8h-4v-3.885c0-2.2-1.8-4-4-4H16c-2.2,0-4,1.8-4,4V32c0,2.2,1.8,4,4,4h2c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4 h7c0,2.209,1.791,4,4,4c2.209,0,4-1.791,4-4h3V24z M32,32H16V12.115h16V32z M40,32h-4V20h1.528L40,24.944V32z", label: "Fast Delivery" },
+      { icon: "m2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3h2z", label: "Best Price" },
     ],
   },
  
   // Add more product objects as needed
 ];
+
+
 
 const AllProduct = () => {
   const [filters, setFilters] = useState({
@@ -263,6 +266,8 @@ const AllProduct = () => {
     discount: '',
     wear: ''
   });
+  
+  const navigate = useNavigate(); // For navigation to the product detail page
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
@@ -285,6 +290,12 @@ const AllProduct = () => {
     );
   });
 
+
+  const goToProductDetail = (productId) => {
+    navigate(`/product/${productId}`); // Navigate to the detail page of the clicked product
+  };
+
+
   return (
     <section className="bg-gray-50  py-8 md:py-12 p-4">
       <div className="mb-4">
@@ -301,7 +312,7 @@ const AllProduct = () => {
             {/* Add more seasons as needed */}
           </select>
           <select name="gender" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500">
-            <option value="Women Stitched" selected>Women Stitched</option>
+            <option value="Women Stitched" select='true'>Women Stitched</option>
             <option value="Women Unstitched">Women Unstitched</option>
             <option value="Men Stitched">Men Stitched</option>
             <option value="Men Unstitched">Men Unstitched</option>
@@ -343,7 +354,10 @@ const AllProduct = () => {
 
       <div className="grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-6">
         {filteredProducts.map((product) => (
-          <div key={product.id} className="rounded-2xl overflow-hidden border hover:shadow-xl transition-all duration-200  border-gray-200 bg-white  shadow-sm">
+          <div
+          key={product.id}
+          onClick={() => goToProductDetail(product.id)} // Clicking product redirects to the detail page
+          className="rounded-2xl overflow-hidden border hover:shadow-xl transition-all duration-200  border-gray-200 bg-white  shadow-sm">
             <div className=" w-full">
               <a href="#">
                 <img className="mx-auto h-full" src={product.image} alt={product.name} />

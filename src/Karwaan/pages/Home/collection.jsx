@@ -15,13 +15,13 @@ const Collection = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="md:w-6 md:h-6 h-4 w-4"
+                  className="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
@@ -43,13 +43,13 @@ const Collection = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="md:w-6 md:h-6 h-4 w-4"
+                  className="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
@@ -74,13 +74,13 @@ const Collection = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="md:w-6 md:h-6 h-4 w-4"
+                  className="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
@@ -106,13 +106,13 @@ const Collection = () => {
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
-                  class="md:w-6 md:h-6 h-4 w-4"
+                  className="md:w-6 md:h-6 h-4 w-4"
                   color="orange"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M9 5l7 7-7 7"
                   />
                 </svg>
