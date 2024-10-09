@@ -86,8 +86,8 @@ const ProductDetail = () => {
           {/* Product Info Section */}
           <div className="w-full lg:w-1/2 ">
           <div className="mb-10 gap-3 md:mt-10 flex-col flex">
-            <h2 className="text-4xl font-[500] ">Asim Jofa Indian Lawn</h2>
-            <p className="text-gray-600 text-lg font-[600] ">Price: 5449</p>
+            <h2 className="lg:text-4xl text-2xl lg:font-[500] font-[400]">Asim Jofa Indian Lawn</h2>
+            <p className="text-gray-600 lg:text-lg text:sm lg:font-[500] font-[400]">Price: 5449</p>
             <button className="bg-black  w-[300px] text-white py-3 px-10 rounded-lg hover:bg-gray-700 transition-all">
               Add to Cart
             </button>
@@ -96,10 +96,10 @@ const ProductDetail = () => {
             </button>
 
           </div>
-            <p className="text-gray-600 mb-2"><span className="font-[600]">Discount:</span> 10%</p>
-            <p className="text-gray-600 mb-2"><span className="font-[600]">Rating:</span> 5.0 ★</p>
-            <p className="text-gray-600 mb-2"><span className="font-[600]">Fabric:</span> Lawn</p>
-            <p className="text-gray-600 mb-2"><span className="font-[600]">Type:</span> Stitched</p>
+            <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Discount:</span> 10%</p>
+            <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Rating:</span> 5.0 ★</p>
+            <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Fabric:</span> Lawn</p>
+            <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Type:</span> Stitched</p>
 
             
             <div className="w-full mt-5  max-w-2xl ">
