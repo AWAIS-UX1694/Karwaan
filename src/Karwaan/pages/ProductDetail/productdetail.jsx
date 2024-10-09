@@ -88,10 +88,10 @@ const ProductDetail = () => {
           <div className="mb-10 gap-3 md:mt-10 flex-col flex">
             <h2 className="lg:text-4xl text-2xl lg:font-[500] font-[400]">Asim Jofa Indian Lawn</h2>
             <p className="text-gray-600 lg:text-lg text:sm lg:font-[500] font-[400]">Price: 5449</p>
-            <button className="bg-black  w-[300px] text-white py-3 px-10 rounded-lg hover:bg-gray-700 transition-all">
+            <button className="bg-black  lg:w-[300px] lg:py-3 lg:px-10 py-2 px-7 text-white  rounded-lg hover:bg-gray-700 transition-all">
               Add to Cart
             </button>
-            <button className="bg-black  w-[300px] text-white py-3 px-10 rounded-lg hover:bg-gray-700 transition-all">
+            <button className="bg-black   lg:w-[300px] lg:py-3 lg:px-10 py-2 px-7 text-white  rounded-lg hover:bg-gray-700 transition-all">
               Buy Now
             </button>
 
