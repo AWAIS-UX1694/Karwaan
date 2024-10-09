@@ -96,11 +96,13 @@ const ProductDetail = () => {
             </button>
 
           </div>
-            <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Discount:</span> 10%</p>
+           <div className="text-sm lg:text-[1rem]">
+           <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Discount:</span> 10%</p>
             <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Rating:</span> 5.0 ★</p>
             <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Fabric:</span> Lawn</p>
             <p className="text-gray-600 mb-2"><span className="lg:font-[500] font-[400]">Type:</span> Stitched</p>
 
+           </div>
             
             <div className="w-full mt-5  max-w-2xl ">
               {/* Collapsible Bar */}
