@@ -85,7 +85,7 @@ const ProductDetail = () => {
 
           {/* Product Info Section */}
           <div className="w-full lg:w-1/2 ">
-          <div className="mb-10 gap-3 mt-10 flex-col flex">
+          <div className="mb-10 gap-3 md:mt-10 flex-col flex">
             <h2 className="text-4xl font-[500] ">Asim Jofa Indian Lawn</h2>
             <p className="text-gray-600 text-lg font-[600] ">Price: 5449</p>
             <button className="bg-black  w-[300px] text-white py-3 px-10 rounded-lg hover:bg-gray-700 transition-all">
