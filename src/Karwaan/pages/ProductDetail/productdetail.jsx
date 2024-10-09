@@ -1,68 +1,155 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-
-const products = [
-  {
-    id: 9,
-    name: "AJMS-16 EMBROIDERED INDIAN RAW SILK 3 PCS",
-    image: "https://asimjofa.com/cdn/shop/files/MG_1492_f3c778e6-ad3e-4faf-83a4-eb824de7e4b1.jpg?v=1725961763&width=600",
-    rating: 4.0,
-    reviews: 455,
-    price: 18499,
-    discount: 5,
-    category: "Lawn",
-    season: "winter",
-    gender: "Men Stitched",
-    type: "3 piece",
-    brand: "asim jofa",
-    wear: "New",
-    features: [
-      { icon: "path-to-fast-delivery-icon", label: "Fast Delivery" },
-      { icon: "M2 12l1-1h0l8-8h0l1-1h0l8 8h0l1 1v6h-4v-3h-8v3H2z", label: "Best Price" },
-    ],
-  },
-  // Add more products here
-];
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const ProductDetail = () => {
-  const { productId } = useParams(); // Extract the product ID from the URL
-  console.log("Product ID:", productId);
-  const product = products.find((product) => product.id === parseInt(productId)); // Find the product by ID
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLocalDeliveryOpen, setIsLocalDeliveryOpen] = useState(false);
 
-  if (!product) {
-    return <p>Product not found.</p>;
-  }
 
+  const toggleLocalDelivery = () => setIsLocalDeliveryOpen(!isLocalDeliveryOpen);
+
+
+  // Toggle open state
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <section className="py-8 md:py-12 bg-gray-100">
-      <div className="container mx-auto p-4">
-        <div className="flex flex-col lg:flex-row gap-8">
-          <div className="w-full lg:w-1/2">
-            <img src={product.image} alt={product.name} className="w-full h-auto rounded-lg shadow-md" />
-          </div>
-          <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl font-bold mb-4">{product.name}</h2>
-            <p className="text-gray-600 mb-2">Price: ${product.price}</p>
-            <p className="text-gray-600 mb-2">Discount: {product.discount}%</p>
-            <p className="text-gray-600 mb-2">Rating: {product.rating} ★</p>
-            <p className="text-gray-600 mb-2">Category: {product.category}</p>
-            <p className="text-gray-600 mb-2">Season: {product.season}</p>
-            <p className="text-gray-600 mb-2">Gender: {product.gender}</p>
-            <p className="text-gray-600 mb-2">Type: {product.type}</p>
-            <p className="text-gray-600 mb-2">Brand: {product.brand}</p>
-            <p className="text-gray-600 mb-2">Wear: {product.wear}</p>
+    <section className="w-full bg-gray-100 py-8">
+      <div className="w-full mx-auto p-4">
+        <div className="flex w-full flex-col lg:flex-row gap-8">
+          {/* Images Section */}
+          <div className="lg:w-[70%]">
+            {/* Carousel for small screens */}
+            <div className="block lg:hidden">
+              <Swiper
+                spaceBetween={10}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+              >
+                <SwiperSlide>
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6019_54d6ec64-92d8-43d1-a41d-74975499f33b.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 3"
+                  />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A9351_d73a5ea0-c17a-4407-b0cc-ed2aa8bcf71e.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 4"
+                  />
+                </SwiperSlide>
+              </Swiper>
+            </div>
 
-            <h3 className="text-xl font-semibold mt-6">Features:</h3>
-            <ul className="mt-2">
-              {product.features.map((feature, index) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <svg className="h-4 w-4 text-gray-500 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d={feature.icon} />
-                  </svg>
-                  <span>{feature.label}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Grid layout for larger screens */}
+            <div className="hidden lg:flex flex-wrap gap-4">
+              <img
+                src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                className="w-[48%] h-auto rounded-lg shadow-md"
+                alt="Product Image 1"
+              />
+              <img
+                src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                className="w-[48%] h-auto rounded-lg shadow-md"
+                alt="Product Image 2"
+              />
+              <img
+                src="https://asimjofa.com/cdn/shop/files/051A6019_54d6ec64-92d8-43d1-a41d-74975499f33b.jpg?v=1726657081&width=600"
+                className="w-[48%] h-auto rounded-lg shadow-md"
+                alt="Product Image 3"
+              />
+              <img
+                src="https://asimjofa.com/cdn/shop/files/051A9351_d73a5ea0-c17a-4407-b0cc-ed2aa8bcf71e.jpg?v=1726657081&width=600"
+                className="w-[48%] h-auto rounded-lg shadow-md"
+                alt="Product Image 4"
+              />
+            </div>
+          </div>
+
+          {/* Product Info Section */}
+          <div className="w-full lg:w-1/2 ">
+          <div className="mb-10 gap-3 mt-10 flex-col flex">
+            <h2 className="text-4xl font-[500] ">Asim Jofa Indian Lawn</h2>
+            <p className="text-gray-600 text-lg font-[600] ">Price: 5449</p>
+            <button className="bg-black  w-[300px] text-white py-3 px-10 rounded-lg hover:bg-gray-700 transition-all">
+              Add to Cart
+            </button>
+            <button className="bg-black  w-[300px] text-white py-3 px-10 rounded-lg hover:bg-gray-700 transition-all">
+              Buy Now
+            </button>
+
+          </div>
+            <p className="text-gray-600 mb-2"><span className="font-[600]">Discount:</span> 10%</p>
+            <p className="text-gray-600 mb-2"><span className="font-[600]">Rating:</span> 5.0 ★</p>
+            <p className="text-gray-600 mb-2"><span className="font-[600]">Fabric:</span> Lawn</p>
+            <p className="text-gray-600 mb-2"><span className="font-[600]">Type:</span> Stitched</p>
+
+            
+            <div className="w-full mt-5  max-w-2xl ">
+              {/* Collapsible Bar */}
+              <div
+                onClick={toggleOpen}
+                className="flex  justify-between items-center bg-gray-100 px-4 py-3 cursor-pointer rounded-lg border"
+              >
+                <h3 className="text-lg font-semibold text-gray-700">
+                  Description
+                </h3>
+                {/* Plus/Minus Icon */}
+                <span className="text-2xl text-gray-600">
+                  {isOpen ? "-" : "+"}
+                </span>
+              </div>
+
+              {/* Description Section */}
+              {isOpen && (
+                <div className="bg-white px-4 py-4 mt-2 rounded-lg  transition-all duration-500">
+                  <p className="text-gray-600">
+                    This Asim Jofa lawn suit is a blend of traditional elegance
+                    and modern design. Perfect for the summer season, it offers
+                    a lightweight and breathable fabric, ideal for any formal or
+                    casual occasion.
+                    Let your ensemble sing with the harmonious melody of magenta adorned with mink color and two-toned zari accompanied by shimmering light gold 3mm sequins. Like notes in a symphony, the threadwork in purple, pink, green and self-color intertwines to create a masterpiece of elegance. With embroidered center and side panels as well as neckline detailing for the back and back itself, this ensemble is a tribute to refined style. The embroidered border for the hemline and sleeves with border adds depth and richness while the embroidered border for chaak conducts the ensemble's grace. Wrap yourself in the embroidered dupatta with borders and let the magenta symphony serenade you.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className="w-full max-w-2xl mt-4">
+        <div
+          onClick={toggleLocalDelivery}
+          className="flex justify-between items-center bg-gray-100 px-4 py-3 cursor-pointer rounded-lg border"
+        >
+          <h3 className="text-lg font-semibold text-gray-700">Local Delivery Timing</h3>
+          <span className="text-2xl text-gray-600">
+            {isLocalDeliveryOpen ? "-" : "+"}
+          </span>
+        </div>
+        {isLocalDeliveryOpen && (
+          <div className="bg-white px-4 py-4 mt-2 rounded-lg transition-all duration-500">
+            <p className="text-gray-600">
+              Local delivery usually takes 3-5 business days. Orders placed before 2 PM are processed the same day to ensure faster delivery.
+            </p>
+          </div>
+        )}
+      </div>
+
           </div>
         </div>
       </div>

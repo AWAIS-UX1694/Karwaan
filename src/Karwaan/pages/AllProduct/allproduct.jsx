@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
+import { Link, useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 
 const products = [
   {
@@ -349,6 +349,7 @@ const AllProduct = () => {
             <option value="Old">Old</option>
             {/* Add more wear options as needed */}
           </select>
+          <Link to="/productdetail" className='p-3 px-5'>Detail Page</Link>
         </div>
       </div>
 
