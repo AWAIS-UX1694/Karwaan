@@ -47,174 +47,173 @@ const Home = () => {
 
   return (
     <>
-     <section className="filter mt-4 overflow-y-scroll z-50 scroll-m-14 flex gap-3 mx-4">
- <div className="filter flex ">
-   {/* First Dropdown: Categories */}
-   <div className="relative inline-block text-left  ">
-    <div className="items-center">
-      <button
-        onClick={toggleCategoryDropdown}
-        className="inline-flex items-center w-[20vw] min-w-[150px] sm:min-w-[200px] justify-between bg-gray-50 p-1 sm:p-2 pl-3 sm:pl-5 pr-1 sm:pr-2 rounded-[1.5rem] sm:rounded-[2rem]"
-      >
-        <p className="text-sm sm:text-lg text-gray-400">Categories</p>
-        <div className="drop h-8 sm:h-12 flex w-8 sm:w-12 rounded-full bg-white items-center justify-center">
-          <svg
-            className="ml-1 sm:ml-2 w-4 sm:w-5 h-4 sm:h-5 mr-1 sm:mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.293-3.294a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
+      <section className="filter mt-4 overflow-y-scroll z-50 scroll-m-14 flex gap-3 mx-4">
+        <div className="filter flex gap-2">
+          {/* First Dropdown: Categories */}
+          <div className="relative inline-block text-left  ">
+            <div className="items-center">
+              <button
+                onClick={toggleCategoryDropdown}
+                className="inline-flex items-center w-[20vw] min-w-[150px] sm:min-w-[200px] justify-between bg-gray-50 p-1 sm:p-2 pl-3 sm:pl-5 pr-1 sm:pr-2 rounded-[1.5rem] sm:rounded-[2rem]"
+              >
+                <p className="text-sm sm:text-lg text-gray-400">Categories</p>
+                <div className="drop h-8 sm:h-12 flex w-8 sm:w-12 rounded-full bg-white items-center justify-center">
+                  <svg
+                    className="ml-1 sm:ml-2 w-4 sm:w-5 h-4 sm:h-5 mr-1 sm:mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.293-3.294a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            {isCategoryOpen && (
+              <div className="z-50 origin-top-right absolute right-0 mt-2 w-[20vw] min-w-[150px] sm:min-w-[200px] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="p-2" role="menu" aria-orientation="vertical">
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Winter Collection
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Summer Collection
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Casual Wear
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Second Dropdown: Seasons */}
+          <div className="relative inline-block text-left">
+            <div className="items-center">
+              <button
+                onClick={toggleSeasonDropdown}
+                className="inline-flex items-center w-[15vw] min-w-[150px] sm:min-w-[200px] justify-between bg-gray-50 p-1 sm:p-2 pl-3 sm:pl-5 pr-1 sm:pr-2 rounded-[1.5rem] sm:rounded-[2rem]"
+              >
+                <p className="text-sm sm:text-lg text-gray-400">Seasons</p>
+                <div className="drop h-8 sm:h-12 flex w-8 sm:w-12 rounded-full bg-white items-center justify-center">
+                  <svg
+                    className="ml-1 sm:ml-2 w-4 sm:w-5 h-4 sm:h-5 mr-1 sm:mr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.293-3.294a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            {isSeasonOpen && (
+              <div className="z-50 origin-top-right absolute right-0 mt-2 w-[14vw] min-w-[150px] sm:min-w-[200px] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                <div className="p-2" role="menu" aria-orientation="vertical">
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Spring
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Summer
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Fall
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
+                    role="menuitem"
+                  >
+                    Winter
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Search Bar */}
+          <div className="relative inline-block text-left">
+            <div className="items-center">
+              <div className="inline-flex items-center md:w-[30vw] lg:w-[30vw] w-full justify-between bg-gray-50 p-1 sm:p-2 pl-3 sm:pl-5 pr-1 sm:pr-2 rounded-[1.5rem] sm:rounded-[2rem]">
+                <input
+                  type="text"
+                  placeholder="Search by name..."
+                  className="bg-transparent focus:outline-none text-sm sm:text-lg text-gray-400 w-full"
+                />
+                <div className="drop h-8 sm:h-12 flex w-8 sm:w-12 rounded-full bg-white items-center justify-center">
+                  <svg
+                    className="ml-1 sm:ml-2 w-4 sm:w-5 h-4 sm:h-5 mr-1 sm:mr-2 text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M21 21l-4.35-4.35M18 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Filter Tabs */}
+          <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
+            Men
+          </button>
+          <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
+            Women
+          </button>
+          <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
+            <p className="w-24 lg:w-28">New Arrival</p>
+          </button>
+          <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
+            Children
+          </button>
+          <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
+            Brand
+          </button>
         </div>
-      </button>
-    </div>
-
-    {isCategoryOpen && (
-      <div className="z-50 origin-top-right absolute right-0 mt-2 w-[20vw] min-w-[150px] sm:min-w-[200px] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-        <div className="p-2" role="menu" aria-orientation="vertical">
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Winter Collection
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Summer Collection
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Casual Wear
-          </a>
-        </div>
-      </div>
-    )}
-  </div>
-
-  {/* Second Dropdown: Seasons */}
-  <div className="relative inline-block text-left">
-    <div className="items-center">
-      <button
-        onClick={toggleSeasonDropdown}
-        className="inline-flex items-center w-[15vw] min-w-[150px] sm:min-w-[200px] justify-between bg-gray-50 p-1 sm:p-2 pl-3 sm:pl-5 pr-1 sm:pr-2 rounded-[1.5rem] sm:rounded-[2rem]"
-      >
-        <p className="text-sm sm:text-lg text-gray-400">Seasons</p>
-        <div className="drop h-8 sm:h-12 flex w-8 sm:w-12 rounded-full bg-white items-center justify-center">
-          <svg
-            className="ml-1 sm:ml-2 w-4 sm:w-5 h-4 sm:h-5 mr-1 sm:mr-2"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M5.292 7.292a1 1 0 011.414 0L10 10.586l3.293-3.294a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </div>
-      </button>
-    </div>
-
-    {isSeasonOpen && (
-      <div className="z-50 origin-top-right absolute right-0 mt-2 w-[14vw] min-w-[150px] sm:min-w-[200px] rounded-2xl shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-        <div className="p-2" role="menu" aria-orientation="vertical">
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Spring
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Summer
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Fall
-          </a>
-          <a
-            href="#"
-            className="block px-4 py-3 sm:py-4 rounded-xl text-sm sm:text-md font-[500] hover:bg-gray-100"
-            role="menuitem"
-          >
-            Winter
-          </a>
-        </div>
-      </div>
-    )}
-  </div>
-
-  {/* Search Bar */}
-  <div className="relative inline-block text-left">
-    <div className="items-center">
-      <div className="inline-flex items-center md:w-[30vw] lg:w-[30vw] w-full justify-between bg-gray-50 p-1 sm:p-2 pl-3 sm:pl-5 pr-1 sm:pr-2 rounded-[1.5rem] sm:rounded-[2rem]">
-        <input
-          type="text"
-          placeholder="Search by name..."
-          className="bg-transparent focus:outline-none text-sm sm:text-lg text-gray-400 w-full"
-        />
-        <div className="drop h-8 sm:h-12 flex w-8 sm:w-12 rounded-full bg-white items-center justify-center">
-          <svg
-            className="ml-1 sm:ml-2 w-4 sm:w-5 h-4 sm:h-5 mr-1 sm:mr-2 text-gray-400"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M21 21l-4.35-4.35M18 10.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"
-            />
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  {/* Filter Tabs */}
-  <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
-    Men
-  </button>
-  <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
-    Women
-  </button>
-  <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
-    <p className="w-24 lg:w-28">New Arrival</p>
-  </button>
-  <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
-    Children
-  </button>
-  <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
-    Brand
-  </button>
- </div>
-</section>
-
+      </section>
 
       <section className="hero h-svh -z-0 w-full p-4">
         <div className="main -z-0 bg-amber-50 h-full overflow-hidden rounded-[2rem] w-full">
@@ -240,7 +239,10 @@ const Home = () => {
               </p>
 
               {/* Shop More Button */}
-              <Link to="/allproduct"  className="flex items-center  mt-4  px-2 pl-5 py-2 rounded-[2.5rem] mb-8">
+              <Link
+                to="/allproduct"
+                className="flex items-center  mt-4  px-2 pl-5 py-2 rounded-[2.5rem] mb-8"
+              >
                 <div className="btn">
                   <p className=" h-16 items-center content-center p-4 px-14 rounded-[2.5rem] text-md hover:bg-black text-black hover:text-white transition-all duration-200  font-[500] bg-white ">
                     SHOW MORE
