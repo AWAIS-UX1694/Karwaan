@@ -4,6 +4,7 @@ import MajorBrand from "./majorbrands";
 import bg1 from "./../../../assets/images/1.jpg";
 import bg2 from "./../../../assets/images/2.jpg";
 import bg3 from "./../../../assets/images/3.jpg";
+import { Link } from "react-router-dom";
 const Home = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [isSeasonOpen, setIsSeasonOpen] = useState(false);
@@ -46,9 +47,10 @@ const Home = () => {
 
   return (
     <>
-     <section className="filter mt-4 overflow-x-visible overflow-y-scroll z-20 scroll-m-14 flex gap-3 mx-4">
-  {/* First Dropdown: Categories */}
-  <div className="relative inline-block text-left">
+     <section className="filter mt-4 overflow-y-scroll z-50 scroll-m-14 flex gap-3 mx-4">
+ <div className="filter flex ">
+   {/* First Dropdown: Categories */}
+   <div className="relative inline-block text-left  ">
     <div className="items-center">
       <button
         onClick={toggleCategoryDropdown}
@@ -210,6 +212,7 @@ const Home = () => {
   <button className="rounded-[1.5rem] sm:rounded-[2rem] text-sm sm:text-lg px-6 sm:px-10 border-2 border-gray-200">
     Brand
   </button>
+ </div>
 </section>
 
 
@@ -237,13 +240,13 @@ const Home = () => {
               </p>
 
               {/* Shop More Button */}
-              <button className="flex items-center  mt-4  px-2 pl-5 py-2 rounded-[2.5rem] mb-8">
+              <Link to="/allproduct"  className="flex items-center  mt-4  px-2 pl-5 py-2 rounded-[2.5rem] mb-8">
                 <div className="btn">
                   <p className=" h-16 items-center content-center p-4 px-14 rounded-[2.5rem] text-md hover:bg-black text-black hover:text-white transition-all duration-200  font-[500] bg-white ">
                     SHOW MORE
                   </p>
                 </div>
-                <div className="icon -rotate-45 h-16 w-16  rounded-full bg-gray-100 ">
+                <div className="icon hover:-rotate-45 rotate-45 transition-all duration-300 h-16 w-16  rounded-full bg-gray-100 ">
                   <img
                     className="items-center ml-4 mt-4"
                     width="30"
@@ -252,7 +255,7 @@ const Home = () => {
                     alt="right--v1"
                   />
                 </div>
-              </button>
+              </Link>
               <button className="absolute bottom-10">See top collection</button>
 
               <div className="sliderbtn">

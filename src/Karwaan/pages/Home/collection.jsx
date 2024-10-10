@@ -3,7 +3,7 @@ import unstitched from "./../../../assets/images/unstitched.jpg"
 const Collection = () => {
   return (
     <section className="w-full p-4">
-      <div className="main flex flex-col gap-7 md:flex-row lg:flex-row">
+      <div className="main flex flex-col gap-7 lg:flex-row ">
         <div className="right bg-cover rounded-3xl overflow-hidden bg-slate-300 min-h-[40rem] md:h-svh w-full lg:w-[35vw]">
         <div className="absolute m-3 md:m-10 ">
               <h2 className="text-[2rem] md:text-[2.5rem]  font-[700] z-10 text-orange-500 ">

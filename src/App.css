@@ -47,6 +47,7 @@
 
 .filter{
   scrollbar-width: 0;
+  overflow-y: visible;
 }
 .filter::-webkit-scrollbar {
   display: none;

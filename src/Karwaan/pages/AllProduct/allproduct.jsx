@@ -299,7 +299,7 @@ const AllProduct = () => {
   return (
     <section className="bg-gray-50  py-8 md:py-12 p-4">
       <div className="mb-4">
-        <div className="filter flex gap-4 mb-4 overflow-scroll">
+        <div className="filter  flex gap-4 mb-4 overflow-scroll">
           <select name="category" onChange={handleFilterChange} className="border p-3 rounded-[2rem] text-gray-500 ">
             <option value="">Select Catigory</option>
             <option value="Printed">Printed</option>
