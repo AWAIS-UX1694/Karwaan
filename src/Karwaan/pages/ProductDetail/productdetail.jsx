@@ -14,6 +14,48 @@ const ProductDetail = () => {
   const toggleOpen = () => {
     setIsOpen(!isOpen);
   };
+
+
+const ImageZoom = ({ imageUrl, zoomLevel = 2 }) => {
+  const [zoomStyles, setZoomStyles] = useState({
+    backgroundPosition: '0% 0%',
+    backgroundSize: '100%',
+  });
+
+  const handleMouseMove = (e) => {
+    const { left, top, width, height } = e.target.getBoundingClientRect();
+    const x = ((e.pageX - left) / width) * 100;
+    const y = ((e.pageY - top) / height) * 100;
+
+    setZoomStyles({
+      backgroundPosition: `${x}% ${y}%`,
+      backgroundSize: `${zoomLevel * 100}%`,
+    });
+  };
+
+  const handleMouseLeave = () => {
+    setZoomStyles({
+      backgroundPosition: '0% 0%',
+      backgroundSize: '100%',
+    });
+  };
+
+  return (
+    <div
+      className="relative overflow-hidden rounded-lg shadow-md"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        backgroundImage: `url(${imageUrl})`,
+        backgroundPosition: zoomStyles.backgroundPosition,
+        backgroundSize: zoomStyles.backgroundSize,
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <img src={imageUrl} alt="Zoom" className="opacity-0 w-full h-auto object-cover" />
+    </div>
+  );
+};
   return (
     <section className="w-full bg-gray-100 py-8">
       <div className="w-full mx-auto p-4">
@@ -59,28 +101,12 @@ const ProductDetail = () => {
             </div>
 
             {/* Grid layout for larger screens */}
-            <div className="hidden lg:flex flex-wrap gap-4">
-              <img
-                src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                className="w-[48%] h-auto rounded-lg shadow-md"
-                alt="Product Image 1"
-              />
-              <img
-                src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                className="w-[48%] h-auto rounded-lg shadow-md"
-                alt="Product Image 2"
-              />
-              <img
-                src="https://asimjofa.com/cdn/shop/files/051A6019_54d6ec64-92d8-43d1-a41d-74975499f33b.jpg?v=1726657081&width=600"
-                className="w-[48%] h-auto rounded-lg shadow-md"
-                alt="Product Image 3"
-              />
-              <img
-                src="https://asimjofa.com/cdn/shop/files/051A9351_d73a5ea0-c17a-4407-b0cc-ed2aa8bcf71e.jpg?v=1726657081&width=600"
-                className="w-[48%] h-auto rounded-lg shadow-md"
-                alt="Product Image 4"
-              />
-            </div>
+            <div className="hidden lg:grid grid-cols-2 gap-4">
+            <ImageZoom  imageUrl="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600" zoomLevel={2} />
+      <ImageZoom imageUrl="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600" zoomLevel={2} />
+      <ImageZoom imageUrl="https://asimjofa.com/cdn/shop/files/051A6019_54d6ec64-92d8-43d1-a41d-74975499f33b.jpg?v=1726657081&width=600" zoomLevel={2} />
+      <ImageZoom imageUrl="https://asimjofa.com/cdn/shop/files/051A9351_d73a5ea0-c17a-4407-b0cc-ed2aa8bcf71e.jpg?v=1726657081&width=600" zoomLevel={2} />
+    </div>
           </div>
 
           {/* Product Info Section */}
