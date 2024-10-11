@@ -142,7 +142,7 @@ const ProductDetail = () => {
                 </a>
               </div>
               <div className="lg:flex gap-3">
-                <button className="bg-black block mt-3w w-full lg:w-[200px] lg:py-3 lg:px-10 py-2 px-7 text-white  rounded-lg hover:bg-gray-700 transition-all">
+                <button className="bg-black block mt-3 w w-full lg:w-[200px] lg:py-3 lg:px-10 py-2 px-7 text-white  rounded-lg hover:bg-gray-700 transition-all">
                   Add to Cart
                 </button>
                 <button className="bg-black block w-full mt-3 lg:w-[200px] lg:py-3 lg:px-10 py-2 px-7 text-white  rounded-lg hover:bg-gray-700 transition-all">
