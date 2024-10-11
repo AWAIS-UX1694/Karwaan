@@ -49,6 +49,11 @@
   scrollbar-width: 0;
   overflow-y: visible;
 }
+
+.filter2{
+  scrollbar-width: 2;
+}
+
 .filter::-webkit-scrollbar {
   display: none;
 }
