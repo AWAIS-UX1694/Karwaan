@@ -361,7 +361,7 @@ const ProductDetail = () => {
               </div>
 
               {/* Sample Reviews */}
-              <div className="filter2 my-4  overflow-y-scroll h-96 space-y-4">
+              <div className="filter2 my-4  overflow-y-scroll h-[40rem] space-y-4">
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Awais Ali</h3>
                   <h3 className="text-sm text-gray-500">09/08/2024</h3>
@@ -383,6 +383,23 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Great product! I'm very satisfied."
+                    <div className="img flex gap-2 mt-3 w-24">
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                   <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                   <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                  </div>
                   </p>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
@@ -405,6 +422,18 @@ const ProductDetail = () => {
                     ))}
                   </div>
                   <p className="text-gray-600">"Good value for money."</p>
+                  <div className="img flex gap-2 mt-3 w-24">
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                   <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                  </div>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Awais Ali</h3>
@@ -427,6 +456,18 @@ const ProductDetail = () => {
                   </div>{" "}
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
+                    <div className="img flex gap-2 mt-3 w-24">
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                   <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                  </div>
                   </p>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
@@ -450,6 +491,14 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
+                    <div className="img flex gap-2 mt-3 w-24">
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                  
+                  </div>
                   </p>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
@@ -473,6 +522,23 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
+                    <div className="img flex gap-2 mt-3 w-24">
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                   <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                   <img
+                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 2"
+                  />
+                  </div>
                   </p>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
@@ -496,6 +562,14 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
+                    <div className="img flex gap-2 mt-3 w-24">
+                  <img
+                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                    className="w-full h-auto rounded-lg shadow-md"
+                    alt="Product Image 1"
+                  />
+                 
+                  </div>
                   </p>
                 </div>
               </div>
