@@ -91,6 +91,7 @@ const ProductDetail = () => {
     return totalPrice;
   };
 
+  
   return (
     <section className="w-full  py-8">
       <div className="w-full mx-auto p-4">
@@ -205,9 +206,9 @@ const ProductDetail = () => {
               <hr width="80%" />
               <div className="lg:w-[30%]">
                 {/* Size selection - as tabs */}
-                <div className="mb-4">
+                <div className=" mb-4  ">
                   <label className="block font-bold mb-2">Select Size:</label>
-                  <div className="flex space-x-4">
+                  <div className="filter flex overflow-x-auto space-x-4">
                     {Object.keys(sizePrice).map((size) => (
                       <button
                         key={size}
