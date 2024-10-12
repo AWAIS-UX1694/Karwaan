@@ -1,6 +1,5 @@
 #root {
   font-family: "Poppins", sans-serif;
-
 }
 /* 
 .logo {
@@ -51,7 +50,7 @@
 }
 
 .filter2{
-  scrollbar-width: 2;
+  scrollbar-width: 0;
 }
 
 .filter::-webkit-scrollbar {

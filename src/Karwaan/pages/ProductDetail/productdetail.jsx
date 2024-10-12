@@ -58,12 +58,45 @@ const ProductDetail = () => {
       </div>
     );
   };
+
+  const [selectedImage, setSelectedImage] = useState(
+    "https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+  );
+
+  const images = [
+    "https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600",
+    "https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600",
+    "https://asimjofa.com/cdn/shop/files/051A6019_54d6ec64-92d8-43d1-a41d-74975499f33b.jpg?v=1726657081&width=600",
+    "https://asimjofa.com/cdn/shop/files/051A9351_d73a5ea0-c17a-4407-b0cc-ed2aa8bcf71e.jpg?v=1726657081&width=600",
+  ];
+
+  // Sample price per size (these can vary based on the product)
+  const sizePrice = {
+    S: 30,
+    M: 35,
+    L: 40,
+    XL: 45,
+    XXL: 50,
+  };
+
+  const shippingCost = 10; // Fixed shipping cost
+
+  const [selectedSize, setSelectedSize] = useState("M"); // Default size: Medium
+  const [quantity, setQuantity] = useState(1); // Default quantity: 1
+
+  // Calculate the total price
+  const calculateTotal = () => {
+    const pricePerItem = sizePrice[selectedSize];
+    const totalPrice = pricePerItem * quantity + shippingCost;
+    return totalPrice;
+  };
+
   return (
-    <section className="w-full bg-gray-100 py-8">
+    <section className="w-full  py-8">
       <div className="w-full mx-auto p-4">
-        <div className="flex w-full flex-col lg:flex-row gap-8">
+        <div className="flex w-full flex-col lg:flex-row ">
           {/* Images Section */}
-          <div className="lg:w-[70%]">
+          <div className="lg:w-[60%]">
             {/* Carousel for small screens */}
             <div className="block lg:hidden">
               <Swiper
@@ -103,28 +136,42 @@ const ProductDetail = () => {
             </div>
 
             {/* Grid layout for larger screens */}
-            <div className="hidden lg:grid grid-cols-2 gap-4">
-              <ImageZoom
-                imageUrl="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                zoomLevel={2}
-              />
-              <ImageZoom
-                imageUrl="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                zoomLevel={2}
-              />
-              <ImageZoom
-                imageUrl="https://asimjofa.com/cdn/shop/files/051A6019_54d6ec64-92d8-43d1-a41d-74975499f33b.jpg?v=1726657081&width=600"
-                zoomLevel={2}
-              />
-              <ImageZoom
-                imageUrl="https://asimjofa.com/cdn/shop/files/051A9351_d73a5ea0-c17a-4407-b0cc-ed2aa8bcf71e.jpg?v=1726657081&width=600"
-                zoomLevel={2}
-              />
+            <div className="hidden lg:grid transition-all duration-300 gap-4">
+              <div className="flex w-full ml-16 flex-col lg:flex-row gap-8">
+                {/* Images Section */}
+                <div className="lg:w-24 h-auto">
+                  {/* Thumbnails for larger screens */}
+                  <div className="hidden lg:grid grid-cols-1 gap-4">
+                    {images.map((image, index) => (
+                      <div
+                        key={index}
+                        className={`cursor-pointer border-2 rounded-lg p-0.5 ${
+                          selectedImage === image
+                            ? "border-gray-900"
+                            : "border-transparent"
+                        }`}
+                        onClick={() => setSelectedImage(image)}
+                      >
+                        <img
+                          src={image}
+                          alt={`Thumbnail ${index}`}
+                          className="w-full object-cover rounded-lg"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Display selected image on larger screens */}
+                <div className="lg:w-[70%]">
+                  <ImageZoom imageUrl={selectedImage} zoomLevel={2} />
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Product Info Section */}
-          <div className="w-full lg:w-1/2 ">
+          <div className="w-full lg:w-[50%] ">
             <div className="mb-10 gap-3 md:mt-10 flex-col flex">
               <h2 className="lg:text-4xl text-2xl lg:font-[700] font-[400]">
                 Asim Jofa Indian Lawn
@@ -141,6 +188,72 @@ const ProductDetail = () => {
                   355 Reviews
                 </a>
               </div>
+              <div className="text-sm lg:text-[1rem]">
+                <p className="text-gray-600 mb-2">
+                  <span className="lg:font-[500] font-[400]">Discount:</span>{" "}
+                  10%
+                </p>
+
+                <p className="text-gray-600 mb-2">
+                  <span className="lg:font-[500] font-[400]">Fabric:</span> Lawn
+                </p>
+                <p className="text-gray-600 mb-2">
+                  <span className="lg:font-[500] font-[400]">Type:</span>{" "}
+                  Stitched
+                </p>
+              </div>
+              <hr width="80%" />
+              <div className="lg:w-[30%]">
+                {/* Size selection - as tabs */}
+                <div className="mb-4">
+                  <label className="block font-bold mb-2">Select Size:</label>
+                  <div className="flex space-x-4">
+                    {Object.keys(sizePrice).map((size) => (
+                      <button
+                        key={size}
+                        onClick={() => setSelectedSize(size)}
+                        className={`px-7 py-3 border rounded-lg ${
+                          selectedSize === size
+                            ? "bg-black text-white"
+                            : " text-black"
+                        }`}
+                      >
+                        {size}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Quantity selection */}
+              <div className="mb-4">
+                <label className="block font-bold mb-2">Select Quantity:</label>
+                <input
+                  type="number"
+                  min="1"
+                  max="5"
+                  value={quantity}
+                  onChange={(e) => setQuantity(parseInt(e.target.value))}
+                  className="w-32 p-2 border rounded-xl"
+                />
+              </div>
+
+              {/* Price calculation */}
+              <div className="mb-4  px- w-[30%]">
+                <div className="text-lg flex justify-between ">
+                  <p className="text-gray-500">Price per item</p>
+                  <p className="font-semibold">${sizePrice[selectedSize]}</p>
+                </div>
+                <div className="text-lg flex justify-between ">
+                  <p className="text-gray-500">Shipping cost</p>
+                  <p className="font-semibold">${shippingCost}</p>
+                </div>
+
+                <div className="text-lg flex justify-between ">
+                  <p className="text-black font-semibold">Total Price</p>
+                  <p className="font-semibold">${calculateTotal()}</p>
+                </div>
+              </div>
               <div className="lg:flex gap-3">
                 <button className="bg-black block mt-3 w w-full lg:w-[200px] lg:py-3 lg:px-10 py-2 px-7 text-white  rounded-lg hover:bg-gray-700 transition-all">
                   Add to Cart
@@ -150,18 +263,7 @@ const ProductDetail = () => {
                 </button>
               </div>
             </div>
-            <div className="text-sm lg:text-[1rem]">
-              <p className="text-gray-600 mb-2">
-                <span className="lg:font-[500] font-[400]">Discount:</span> 10%
-              </p>
-
-              <p className="text-gray-600 mb-2">
-                <span className="lg:font-[500] font-[400]">Fabric:</span> Lawn
-              </p>
-              <p className="text-gray-600 mb-2">
-                <span className="lg:font-[500] font-[400]">Type:</span> Stitched
-              </p>
-            </div>
+            <hr width="80%" />
 
             <div className="w-full mt-5  max-w-2xl ">
               {/* Collapsible Bar */}
@@ -284,7 +386,7 @@ const ProductDetail = () => {
                       >
                         <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
                       </svg>
-                      <div className="h-1.5 w-52 lg:w-80 rounded-full bg-gray-200">
+                      <div className="h-1.5 w-52 lg:w-80 rounded-full bg-gray-100">
                         <div
                           className="h-1.5 rounded-full bg-yellow-300"
                           style={{ width: "20%" }}
@@ -314,7 +416,7 @@ const ProductDetail = () => {
                       >
                         <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
                       </svg>
-                      <div className="h-1.5 w-52 lg:w-80 rounded-full bg-gray-200">
+                      <div className="h-1.5 w-52 lg:w-80 rounded-full bg-gray-100">
                         <div
                           className="h-1.5 rounded-full bg-yellow-300"
                           style={{ width: "60%" }}
@@ -343,7 +445,7 @@ const ProductDetail = () => {
                       >
                         <path d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z" />
                       </svg>
-                      <div className="h-1.5 w-52 lg:w-80 rounded-full bg-gray-200">
+                      <div className="h-1.5 w-52 lg:w-80 rounded-full bg-gray-100">
                         <div
                           className="h-1.5 rounded-full bg-yellow-300"
                           style={{ width: "40%" }}
@@ -361,7 +463,7 @@ const ProductDetail = () => {
               </div>
 
               {/* Sample Reviews */}
-              <div className="filter2 my-4  overflow-y-scroll h-[40rem] space-y-4">
+              <div className="filter2 my-4  overflow-y-scroll h-[40rem] lg:w-[80%]  space-y-4">
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Awais Ali</h3>
                   <h3 className="text-sm text-gray-500">09/08/2024</h3>
@@ -383,24 +485,24 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Great product! I'm very satisfied."
-                    <div className="img flex gap-2 mt-3 w-24">
-                  <img
-                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 1"
-                  />
-                   <img
-                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 2"
-                  />
-                   <img
-                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 2"
-                  />
-                  </div>
                   </p>
+                  <div className="img flex gap-2 mt-3 w-24">
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 1"
+                    />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 2"
+                    />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 2"
+                    />
+                  </div>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Hamza Waheed</h3>
@@ -423,16 +525,16 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">"Good value for money."</p>
                   <div className="img flex gap-2 mt-3 w-24">
-                  <img
-                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 1"
-                  />
-                   <img
-                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 2"
-                  />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 1"
+                    />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 2"
+                    />
                   </div>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
@@ -456,19 +558,19 @@ const ProductDetail = () => {
                   </div>{" "}
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
-                    <div className="img flex gap-2 mt-3 w-24">
-                  <img
-                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 1"
-                  />
-                   <img
-                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 2"
-                  />
-                  </div>
                   </p>
+                  <div className="img flex gap-2 mt-3 w-24">
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 1"
+                    />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 2"
+                    />
+                  </div>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Hamza Waheed</h3>
@@ -491,15 +593,15 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
-                    <div className="img flex gap-2 mt-3 w-24">
-                  <img
-                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 1"
-                  />
-                  
-                  </div>
                   </p>
+
+                  <div className="img flex gap-2 mt-3 w-24">
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 1"
+                    />
+                  </div>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Awais Ali</h3>
@@ -522,24 +624,25 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
-                    <div className="img flex gap-2 mt-3 w-24">
-                  <img
-                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 1"
-                  />
-                   <img
-                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 2"
-                  />
-                   <img
-                    src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 2"
-                  />
-                  </div>
                   </p>
+
+                  <div className="img flex gap-2 mt-3 w-24">
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 1"
+                    />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 2"
+                    />
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A6043_3d1b4735-105f-41f8-9d6c-00ee05c51945.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 2"
+                    />
+                  </div>
                 </div>
                 <div className="p-4 border border-gray-200 rounded-lg">
                   <h3 className="font-semibold text-gray-900">Hamza Waheed</h3>
@@ -562,15 +665,15 @@ const ProductDetail = () => {
                   </div>
                   <p className="text-gray-600">
                     "Decent quality, but room for improvement."
-                    <div className="img flex gap-2 mt-3 w-24">
-                  <img
-                    src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
-                    className="w-full h-auto rounded-lg shadow-md"
-                    alt="Product Image 1"
-                  />
-                 
-                  </div>
                   </p>
+
+                  <div className="img flex gap-2 mt-3 w-24">
+                    <img
+                      src="https://asimjofa.com/cdn/shop/files/051A5980_543ffd91-6a45-416a-9b03-0b7cd57d1609.jpg?v=1726657081&width=600"
+                      className="w-full h-auto rounded-lg shadow-md"
+                      alt="Product Image 1"
+                    />
+                  </div>
                 </div>
               </div>
             </section>
