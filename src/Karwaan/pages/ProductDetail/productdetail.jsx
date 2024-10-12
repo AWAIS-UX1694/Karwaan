@@ -72,11 +72,11 @@ const ProductDetail = () => {
 
   // Sample price per size (these can vary based on the product)
   const sizePrice = {
-    S: 30,
-    M: 35,
-    L: 40,
-    XL: 45,
-    XXL: 50,
+    S: 5449,
+    M: 6245,
+    L: 6987,
+    XL: 7543,
+    XXL: 8999,
   };
 
   const shippingCost = 10; // Fixed shipping cost
@@ -171,7 +171,7 @@ const ProductDetail = () => {
           </div>
 
           {/* Product Info Section */}
-          <div className="w-full lg:w-[50%] ">
+          <div className="w-full mt-5 lg:mt-0 lg:w-[50%] ">
             <div className="mb-10 gap-3 md:mt-10 flex-col flex">
               <h2 className="lg:text-4xl text-2xl lg:font-[700] font-[400]">
                 Asim Jofa Indian Lawn
@@ -239,7 +239,7 @@ const ProductDetail = () => {
               </div>
 
               {/* Price calculation */}
-              <div className="mb-4  px- w-[30%]">
+              <div className="mb-4   lg:w-[30%]">
                 <div className="text-lg flex justify-between ">
                   <p className="text-gray-500">Price per item</p>
                   <p className="font-semibold">${sizePrice[selectedSize]}</p>
