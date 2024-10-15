@@ -5,6 +5,7 @@ import bg1 from "./../../../assets/images/1.jpg";
 import bg2 from "./../../../assets/images/2.jpg";
 import bg3 from "./../../../assets/images/3.jpg";
 import { Link } from "react-router-dom";
+import WhatsNew from "./whatsnew";
 const Home = () => {
   const [isCategoryOpen, setIsCategoryOpen] = useState(false);
   const [isSeasonOpen, setIsSeasonOpen] = useState(false);
@@ -291,6 +292,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <WhatsNew/>
       <Collection />
       <MajorBrand />
     </>

@@ -9,7 +9,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex md:px-9 px-5 p-3 justify-between bg-white dark:bg-gray-900  text-center items-center">
+      <header className="flex md:px-9 px-5 p-3 justify-between bg-white dark:bg-black  text-center items-center">
         <div className="menu hover:rotate-180 transition-all duration-500 transform-gpu cursor-pointer ">
           <img
             onClick={toggleDrawer}
@@ -42,7 +42,7 @@ const Header = () => {
 
         {/* Drawer component */}
         <div
-          className={`fixed top-0 left-0 z-40 w-72 h-screen p-4 bg-white dark:bg-gray-800 transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 z-40 w-72 h-screen p-4 bg-white dark:bg-black transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           aria-labelledby="drawer-navigation-label"
@@ -50,7 +50,7 @@ const Header = () => {
           <Link to="/">
             <h1
               id="drawer-navigation-label"
-              className="logo font-bold text-start text-2xl uppercase dark:text-gray-400"
+              className="logo font-bold text-start text-2xl uppercase dark:text-white"
             >
               Karwaa.n
             </h1>
@@ -81,10 +81,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
                 >
                   <svg
-                  className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                  className="w-6 h-6 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -99,10 +99,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/brand"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
                 >
                   <svg
-                    className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="w-5 h-5 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -116,10 +116,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/allproduct"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
                 >
                   <svg
-                    className="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                    className="w-5 h-5 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"

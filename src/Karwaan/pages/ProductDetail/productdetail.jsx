@@ -204,11 +204,11 @@ const ProductDetail = () => {
                 </p>
               </div>
               <hr width="80%" />
-              <div className="lg:w-[30%]">
+              <div className="lg:w-[80%]">
                 {/* Size selection - as tabs */}
                 <div className=" mb-4  ">
                   <label className="block font-bold mb-2">Select Size:</label>
-                  <div className="filter flex overflow-x-auto space-x-4">
+                  <div className="filter flex overflow-x-auto  space-x-4">
                     {Object.keys(sizePrice).map((size) => (
                       <button
                         key={size}
