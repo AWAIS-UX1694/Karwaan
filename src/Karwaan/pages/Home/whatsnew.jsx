@@ -3,7 +3,7 @@ const WhatsNew = () => {
     <>
       <div class="flex items-center lg:space-x-16 lg:py-36 py-10 lg:gap-0 ">
         <div className="what  text-center mx-10 ">
-          <h2 className="lg:text-5xl md:font-bold md:text-3xl text-normal lg:w-[30rem] md:w-[17rem] w-8 uppercase text-center">
+          <h2 className="lg:text-5xl  md:text-3xl text-normal lg:w-[30rem] md:w-[17rem] w-8 uppercase text-center">
             New Collection
           </h2>
         </div>
