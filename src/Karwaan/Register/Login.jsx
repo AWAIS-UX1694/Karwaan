@@ -149,10 +149,8 @@ const Login = () => {
                       />
                     </div>
                   </form>
-                  <div className="company  justify-center h-full lg:w-[50%]  hidden lg:block md:block items-center">
-                    <h1 className="text-[6rem] rotate-90 font-extrabold">
-                      Karwaa.n
-                    </h1>
+                  <div className="company  justify-center  lg:w-[50%]  hidden lg:block md:block items-center">
+                    <img className="h-96 ml-28" src="https://png.pngtree.com/png-clipart/20221010/original/pngtree-hijab-loose-style-shawl-logo-design-png-image_8670839.png" alt="" />
                   </div>
                 </div>
 
@@ -343,7 +341,7 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="pay lgL:w-[30%] md:w-[30%] hidden lg:block md:block justify-center items-center">
-                  <img src="https://static.thenounproject.com/png/195163-200.png" alt="" />
+                  <img className="w-72 mt-28 ml-32" src="https://static.thenounproject.com/png/195163-200.png" alt="" />
                 </div>
               </div>
             )}
