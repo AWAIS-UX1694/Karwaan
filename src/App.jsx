@@ -5,7 +5,8 @@ import Home from './Karwaan/pages/Home/home'
 import Brand from './Karwaan/pages/Brand/brand'
 import AllProduct from './Karwaan/pages/AllProduct/allproduct'
 import ProductDetail from './Karwaan/pages/ProductDetail/productdetail'
-import Login from './Karwaan/Register/Login'
+import LogIn from './Karwaan/Register/Login'
+import SignUp from './Karwaan/Register/SignUp'
 // import MenCollection from './Karwaan/pages/Men/menCollection'
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       <BrowserRouter>
       <Header/>
         <Routes>
-          <Route path='/login' element={<Login/>} />
+          <Route path='/login' element={<LogIn/>} />
+          <Route path='/signup' element={<SignUp/>} />
           <Route path='/' element={<Home/>} />
           <Route path='/brand' element={<Brand/>} />
           <Route path='/allproduct' element={<AllProduct/>} />
