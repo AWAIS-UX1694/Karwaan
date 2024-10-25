@@ -28,7 +28,7 @@ const Cart = () => {
   return (
     <section className="bg-white py-8 antialiased md:py-16">
       <div className="mx-auto max-w-screen-xl px-4 2xl:px-0">
-        <h2 className="text-xl font-semibold text-gray-900 sm:text-2xl">
+        <h2 className="text-xl text-gray-900 font-bold sm:text-2xl">
           Shopping Cart
         </h2>
 
@@ -114,7 +114,7 @@ const Cart = () => {
             </div>
           </div>
 
-          <div className="space-y-4 lg:w-96 md:w-96 w-full rounded-lg border border-gray-200 bg-white lg:p-4 p-2 shadow-sm sm:p-6">
+          <div className="space-y-4 lg:w-96 md:w-full w-full mt-6 lg:mt-0 rounded-lg border border-gray-200 bg-white lg:p-4 p-2 shadow-sm sm:p-6">
         <p className="text-xl font-semibold text-gray-900">Order summary</p>
 
         <div className="space-y-4">
@@ -134,7 +134,7 @@ const Cart = () => {
               <dd className="text-base font-medium text-gray-900">$0.00</dd>
             </dl>
           </div>
-          <button className="w-full text-center items-center p-2 bg-black text-white rounded-lg ">Click to procced</button>
+          <button className="w-full text-center items-center p-2 bg-black hover:bg-gray-700 text-white rounded-lg ">Click to procced</button>
         </div>
       </div>
         </div>
