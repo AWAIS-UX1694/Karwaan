@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const LogIn = () => {
     return (
         <div className="flex items-center justify-center h-screen ">
-            <div className="bg-gray-50 rounded-3xl shadow-md w-full max-w-4xl flex h-3/4">
+            <div className="lg:bg-gray-50 rounded-3xl lg:shadow-md w-full max-w-4xl flex h-3/4">
                 {/* Left Side: Form */}
                 <div className="lg:w-1/2 w-full h-full flex items-center justify-center p-8">
                     <div className="w-full">

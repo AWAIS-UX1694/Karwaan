@@ -26,14 +26,15 @@ const Header = () => {
         <div className="links flex gap-3 items-center">
           <div className="font-bold hidden sm:visible">About</div>
           <div className="font-bold hidden md:hidden">FAQ's</div>
-          <div className="rounded-full bg-gray-100 md:p-4 p-2">
+          <Link to="/cart">
+          <div className="rounded-full bg-gray-100  md:p-4 p-2">
             <img
             className="md:w-6 md:h-6 w-5 h-5"
             
               src="https://img.icons8.com/forma-thin/24/shopping-bag.png"
               alt="shopping-bag"
             />{" "}
-          </div>
+          </div></Link>
         </div>
       </header>
       {/* SIDEBAR */}

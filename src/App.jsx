@@ -7,6 +7,7 @@ import AllProduct from './Karwaan/pages/AllProduct/allproduct'
 import ProductDetail from './Karwaan/pages/ProductDetail/productdetail'
 import LogIn from './Karwaan/Register/Login'
 import SignUp from './Karwaan/Register/SignUp'
+import Cart from './Karwaan/pages/Cart/cart'
 // import MenCollection from './Karwaan/pages/Men/menCollection'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/brand' element={<Brand/>} />
           <Route path='/allproduct' element={<AllProduct/>} />
           <Route path="/productdetail" element={<ProductDetail />} />
+          <Route path="/cart" element={<Cart />} />
           {/* <Route path='/men' element={<MenCollection/>} /> */}
         </Routes>
       </BrowserRouter>

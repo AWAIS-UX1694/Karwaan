@@ -28,7 +28,7 @@ const SignUp = () => {
   return (
     <>
       <div className="flex  lg:justify-center lg:items-center h-screen">
-        <div className="lg:w-[65vw] w-full p-4">
+        <div className="lg:w-[65vw] w-full lg:p-4 p-3">
           {/* Stepper Nav */}
           <ul className="relative flex flex-row gap-x-2">
             {[1, 2, 3].map((step) => (
@@ -82,7 +82,7 @@ const SignUp = () => {
           {/* Stepper Content */}
           <div className="mt-5 sm:mt-8">
             {currentStep === 1 && (
-              <div className="p-4 lg:p-10 lg:h-auto bg-gray-50 border border-dashed border-gray-200 rounded-xl">
+              <div className="p-2 lg:p-10 lg:h-auto lg:bg-gray-50 md:bg-gray-50 lg:border border-dashed border-gray-200 rounded-xl">
                 {/* --------------------------- */}
                 <h1 className="text-3xl mb-5">Registration</h1>
                 <div className="inner h-full items-center flex">
@@ -98,7 +98,7 @@ const SignUp = () => {
                         type="text"
                         id="name"
                         placeholder="Enter your full name"
-                        class="bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 "
+                        class="lg:bg-gray-50 md:bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3 "
                         required
                       />
                     </div>
@@ -113,7 +113,7 @@ const SignUp = () => {
                       <input
                         type="email"
                         id="email"
-                        class="bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 "
+                        class="lg:bg-gray-50 md:bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3 "
                         placeholder="name@flowbite.com"
                         required
                       />
@@ -129,7 +129,7 @@ const SignUp = () => {
                         type="number"
                         id="number"
                         placeholder="Enter active numver"
-                        class="bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg  block w-full p-4 "
+                        class="lg:bg-gray-50 md:bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg  block w-full lg:p-4 p-3 "
                         required
                       />
                     </div>
@@ -144,7 +144,7 @@ const SignUp = () => {
                         type="password"
                         id="password"
                         placeholder="Enter Password"
-                        class="bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4 "
+                        class="lg:bg-gray-50 md:bg-gray-50 border  border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3 "
                         required
                       />
                     </div>
@@ -159,7 +159,7 @@ const SignUp = () => {
             )}
 
             {currentStep === 2 && (
-              <div className="lg:p-10 md:p-5 h-auto bg-gray-50  border border-dashed border-gray-200 rounded-xl">
+              <div className="lg:p-10 md:p-5 p-2 h-auto lg:bg-gray-50 md:bg-gray-50  lg:border border-dashed border-gray-200 rounded-xl">
                 <h1 className="text-3xl mb-5">Addres</h1>
                 <div className="inner2 flex">
                   <div className="lg:w-[60%] w-full">
@@ -175,7 +175,7 @@ const SignUp = () => {
                           type="text"
                           id="address1"
                           placeholder="Enter your street address"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                          class="lg:bg-gray-50 md:bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3"
                           required
                         />
                       </div>
@@ -191,7 +191,7 @@ const SignUp = () => {
                           type="text"
                           id="address2"
                           placeholder="Apartment, suite, etc. (optional)"
-                          class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                          class="lg:bg-gray-50 md:bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3"
                         />
                       </div>
 
@@ -207,7 +207,7 @@ const SignUp = () => {
                             type="text"
                             id="city"
                             placeholder="Enter your city"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                            class="lg:bg-gray-50 md:bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3"
                             required
                           />
                         </div>
@@ -223,7 +223,7 @@ const SignUp = () => {
                             type="text"
                             id="state"
                             placeholder="Enter your state"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                            class="lg:bg-gray-50 md:bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3"
                             required
                           />
                         </div>
@@ -241,7 +241,7 @@ const SignUp = () => {
                             type="text"
                             id="country"
                             placeholder="Enter your country"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                            class="lg:bg-gray-50 md:bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3"
                             required
                           />
                         </div>
@@ -257,7 +257,7 @@ const SignUp = () => {
                             type="number"
                             id="postalcode"
                             placeholder="Enter your postal code"
-                            class="bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-4"
+                            class="lg:bg-gray-50 md:bg-gray-50 border border-gray-300 text-gray-900 text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full lg:p-4 p-3"
                             required
                           />
                         </div>
@@ -280,7 +280,7 @@ const SignUp = () => {
             )}
 
             {currentStep === 3 && (
-              <div className="lg:p-9 md:p-4  h-auto bg-gray-50 flex border border-dashed border-gray-200 rounded-xl">
+              <div className="lg:p-9 md:p-4  h-auto lg:bg-gray-50 md:bg-gray-50 flex lg:border border-dashed border-gray-200 rounded-xl">
                 <div>
                   {/* Tabs for different payment methods */}
                   <h1 className="text-3xl font-semibold text-gray-900 mb-5">
@@ -332,7 +332,7 @@ const SignUp = () => {
                     </div>
 
                     {/* Render form based on selected payment method */}
-                    <div className="p-5 w-full">
+                    <div className="lg:p-5 p-2 w-full">
                       {selectedMethod === "visa" && <VisaForm />}
                       {selectedMethod === "easypaisa" && <EasyPaisaForm />}
                       {selectedMethod === "jazzcash" && <JazzCashForm />}
@@ -347,18 +347,18 @@ const SignUp = () => {
             )}
 
             {currentStep === 4 && (
-              <div className="p-4 m-4 h-auto bg-gray-50 flex justify-center items-center border border-dashed border-gray-200 rounded-xl">
+              <div className="p-4 m-4 h-auto lg:bg-gray-50 md:bg-gray-50 flex justify-center items-center lg:border border-dashed border-gray-200 rounded-xl">
                 <h3 className="text-gray-500">Final content</h3>
               </div>
             )}
 
             {/* Button Group */}
-            <div className="mt-5 p-4 flex justify-between items-center gap-x-2">
+            <div className="mt-5 lg:p-4 p-3 flex justify-between items-center gap-x-2">
               <button
                 type="button"
                 onClick={handleBack}
                 disabled={currentStep === 1}
-                className="py-2 absolute lg:relative lg:bottom-0 lg:left-0 bottom-3 left-4 px-3 inline-flex items-center gap-x-1 text-md font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none disabled:opacity-50"
+                className="py-2 absolute lg:relative lg:bottom-0 lg:left-0 bottom-3 left-4 px-3 inline-flex items-center gap-x-1 text-md font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:lg:bg-gray-50 md:bg-gray-50 focus:outline-none disabled:opacity-50"
               >
                 <svg
                   className="shrink-0 size-4"
@@ -438,7 +438,7 @@ const VisaForm = () => (
           type="text"
           name="cardNumber"
           placeholder="Enter card number"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -448,7 +448,7 @@ const VisaForm = () => (
           type="text"
           name="cardholderName"
           placeholder="Enter cardholder name"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -458,7 +458,7 @@ const VisaForm = () => (
           type="text"
           name="expiryDate"
           placeholder="MM/YY"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -468,7 +468,7 @@ const VisaForm = () => (
           type="password"
           name="cvv"
           placeholder="Enter CVV"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -478,7 +478,7 @@ const VisaForm = () => (
           type="text"
           name="billingAddress"
           placeholder="Enter billing address"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -497,7 +497,7 @@ const EasyPaisaForm = () => (
           type="text"
           name="mobileNumber"
           placeholder="Enter mobile number"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -507,7 +507,7 @@ const EasyPaisaForm = () => (
           type="text"
           name="accountHolderName"
           placeholder="Enter account holder name"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -517,7 +517,7 @@ const EasyPaisaForm = () => (
           type="text"
           name="transactionId"
           placeholder="Enter transaction ID"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -527,7 +527,7 @@ const EasyPaisaForm = () => (
           type="password"
           name="pin"
           placeholder="Enter PIN"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -546,7 +546,7 @@ const JazzCashForm = () => (
           type="text"
           name="mobileNumber"
           placeholder="Enter mobile number"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -556,7 +556,7 @@ const JazzCashForm = () => (
           type="text"
           name="accountHolderName"
           placeholder="Enter account holder name"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -566,7 +566,7 @@ const JazzCashForm = () => (
           type="text"
           name="transactionId"
           placeholder="Enter transaction ID"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -576,7 +576,7 @@ const JazzCashForm = () => (
           type="password"
           name="pin"
           placeholder="Enter PIN"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -595,7 +595,7 @@ const CODForm = () => (
           type="text"
           name="fullName"
           placeholder="Enter full name"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -605,7 +605,7 @@ const CODForm = () => (
           type="text"
           name="deliveryAddress"
           placeholder="Enter delivery address"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -615,7 +615,7 @@ const CODForm = () => (
           type="text"
           name="contactNumber"
           placeholder="Enter contact number"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
           required
         />
       </div>
@@ -625,7 +625,7 @@ const CODForm = () => (
           type="text"
           name="specialInstructions"
           placeholder="Any special instructions"
-          className="w-full p-4 text-lg border border-gray-300 rounded-md"
+          className="w-full lg:p-4 p-3 text-lg border border-gray-300 rounded-md"
         />
       </div>
     </div>
