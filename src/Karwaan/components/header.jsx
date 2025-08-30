@@ -9,7 +9,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="flex md:px-9 px-5 p-3 justify-between bg-white dark:bg-black  text-center items-center">
+      <header className="flex md:px-9 px-5 p-3 justify-between bg-white  text-center items-center">
         <div className="menu hover:rotate-180 transition-all duration-500 transform-gpu cursor-pointer ">
           <img
             onClick={toggleDrawer}
@@ -43,7 +43,7 @@ const Header = () => {
 
         {/* Drawer component */}
         <div
-          className={`fixed top-0 left-0 z-40 w-72 h-screen p-4 bg-white dark:bg-black transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 z-40 w-72 h-screen p-4 bg-white transform transition-transform duration-300 ease-in-out ${
             isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           aria-labelledby="drawer-navigation-label"
@@ -51,7 +51,7 @@ const Header = () => {
           <Link to="/">
             <h1
               id="drawer-navigation-label"
-              className="logo font-bold text-start text-2xl uppercase dark:text-white"
+              className="logo font-bold text-start text-2xl uppercase "
             >
               Karwaa.n
             </h1>
@@ -59,7 +59,7 @@ const Header = () => {
           <button
             type="button"
             onClick={toggleDrawer}
-            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            className="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center"
           >
             <svg
               aria-hidden="true"
@@ -82,10 +82,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
                 >
                   <svg
-                  className="w-6 h-6 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
+                  className="w-6 h-6 text-black transition duration-75  group-hover:text-gray-900 "
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -100,10 +100,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/brand"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
                 >
                   <svg
-                    className="w-5 h-5 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
+                    className="w-5 h-5 text-black transition duration-75  group-hover:text-gray-900 k"
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -117,10 +117,10 @@ const Header = () => {
               <li>
                 <Link
                   to="/allproduct"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100  group"
                 >
                   <svg
-                    className="w-5 h-5 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
+                    className="w-5 h-5 text-black transition duration-75 group-hover:text-gray-900 "
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
@@ -137,10 +137,10 @@ const Header = () => {
             <li>
                 <Link
                   to="/login"
-                  className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-white dark:hover:text-black group"
+                  className="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100  group"
                 >
                   <svg
-                    className="w-5 h-5 text-black transition duration-75 dark:text-white group-hover:text-gray-900 dark:group-hover:text-black"
+                    className="w-5 h-5 text-black transition duration-75  group-hover:text-gray-900 "
                     aria-hidden="true"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
