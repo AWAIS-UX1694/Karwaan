@@ -355,6 +355,7 @@ const AllProduct = () => {
 
       <div className="grid gap-4 sm:grid-cols-2 md:mb-8 lg:grid-cols-3 xl:grid-cols-6">
         {filteredProducts.map((product) => (
+      <Link to="/productdetail">
           <div
           key={product.id}
           onClick={() => goToProductDetail(product.id)} // Clicking product redirects to the detail page
@@ -380,6 +381,7 @@ const AllProduct = () => {
                   </button>
                 </div>
               </div>
+              
 
               <a href="#" className="text-lg font-semibold leading-tight text-gray-900 hover:underline">
                 {product.name}
@@ -415,6 +417,7 @@ const AllProduct = () => {
               </div>
             </div>
           </div>
+        </Link>
         ))}
       </div>
     </section>
